@@ -1,0 +1,18 @@
+app:
+  name: "gin-init"
+  port: 8080
+  debug: true
+
+database:
+  driver: "mysql"
+  dsn: "root:password@tcp(127.0.0.1:3306)/gin-init?charset=utf8mb4&parseTime=True&loc=Local"
+  max_open_conns: 100
+  max_idle_conns: 20
+
+# 新增日志配置
+log:
+  filename: "logs/app.log"   # 日志文件路径
+  max_size: 10               # 单个文件最大大小（MB）
+  max_age: 7                 # 日志保留天数
+  max_backups: 30            # 最大备份文件数
+  compress: true             # 是否压缩旧日志
